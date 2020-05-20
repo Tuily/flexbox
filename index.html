@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Flexbox</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-
+    
     <!-- Highlight.js -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/default.min.css">
-    <title>Flexbox</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <div class="flex-container">
+        <h4>Flexbox!</h4>
+    </div>
 
     <div id="example1" class="flex-container">
         <div class="example">
@@ -97,7 +101,6 @@
                 justify-content: space-between;
                 margin-left: 5px;
                 padding: 10px;
-                border: 1px dashed var(--color3);
             }
             
             .content {
@@ -112,10 +115,56 @@
             </pre>
         </div>
     </div>
+
+    <div id="example4" class="flex-container">
+        <div class="example">
+
+            <div class="container">
+                
+                <div class="circle"></div>
+                <div class="inner-container">
+
+                    <div class="content"></div>
+                    <div class="content"></div>
+                </div>
+                
+            </div>
+
+        </div>
+        <div class="code">
+            <pre>
+                <code class="css">
+            .container {
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+            }
+            
+            .circle {
+                height: 100px;
+                width: 100px;
+                border-radius: 50px;
+                background: var(--color4);
+            }
+            
+            .inner-container {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                justify-content: space-between;
+                padding-left: 15px;
+            }
+            
+            .content {
+                flex-basis: 45%;
+            }
+                </code>
+            </pre>
+        </div>
+    </div>
     
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js"></script>
-<!-- and it's easy to individually load additional languages -->
-<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/languages/css.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

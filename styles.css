@@ -10,6 +10,12 @@ body {
     background: #eee;
 }
 
+h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: var(--color1);
+}
+
 .flex-container {
     display: flex;
     max-width: 900px;
@@ -21,6 +27,16 @@ body {
     flex: 1;
     background: #fff;
     padding: 25px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+pre {
+    flex: 1;
+}
+
+.hljs {
+    background: unset;
 }
 
 .code {
@@ -28,6 +44,8 @@ body {
     flex: 1;
     align-items: center;
     background: var(--color4);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .container {
@@ -37,6 +55,7 @@ body {
 
 .inner-container {
     border-radius: 10px;
+    border: 1px dashed var(--color3);
 }
 
 .content,
@@ -85,7 +104,6 @@ body {
     justify-content: space-between;
     margin-left: 5px;
     padding: 10px;
-    border: 1px dashed var(--color3);
 }
 
 #example3 .content {
@@ -95,4 +113,36 @@ body {
 
 #example3 .inner-content {
     flex-basis: 48%;
+}
+
+/* EXAMPLE 4 */
+#example4 .example {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+#example4 .container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#example4 .circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background: var(--color4);
+}
+
+#example4 .inner-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 15px;
+}
+
+#example4 .content {
+    flex-basis: 45%;
 }
